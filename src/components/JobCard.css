@@ -1,0 +1,19 @@
+h2{
+    font-size: 30px;
+    color: blue;
+}
+
+h2:hover{
+    color: lightblue;
+}
+
+li{
+    list-style: none;
+}
+
+.job-box{
+    
+    border: 1px solid blue;
+    margin: 20px;
+    padding: 20px;
+}

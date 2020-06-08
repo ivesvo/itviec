@@ -7,7 +7,7 @@ export default function Jobs() {
     let [jobs, setJobs] = useState([])
 
     const getData = async () => {
-        let url = `http://localhost:3001/jobs/`
+        let url = `${process.env.REACT_APP_BACKEND_SERVER_URL}/jobs`
         let data = await fetch(url)
         let result = await data.json()
         console.log("Result is", result)

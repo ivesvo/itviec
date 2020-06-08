@@ -2,12 +2,12 @@ import './App.css';
 import React,  {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route, Redirect } from "react-router-dom";
-import Jobs from './pages/Jobs'gi
+import Jobs from './pages/Jobs'
 import Login from './pages/Login'
 import Detail from './pages/Detail'
 
 function App() {
-  let [user, setUser] = useState(true) // if user is true -> logging in . if false, not logging in. 
+  let [user, setUser] = useState(false) // if user is true -> logging in . if false, not logging in. 
 
   const ProtectedRoute = (props) => {
   

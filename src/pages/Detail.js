@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import Container from 'react-bootstrap/Container'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Col,Row, Badge, Button } from 'react-bootstrap';
+import { Col,Row, Badge, Button,Navbar } from 'react-bootstrap';
 import moment from 'moment';
+import '../App.css';
 
 
 export default function Detail(props) {
@@ -29,7 +30,25 @@ export default function Detail(props) {
     return (
         <div>
             <div className="job-detail">
-                <h1>U want job details?</h1>
+            <Container fluid>
+                <div>
+
+                    <Navbar  variant="dark">
+                        <Navbar.Brand href="#jobs">
+                            <img
+                                alt=""
+                                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/link-symbol_1f517.png"
+                                width="30"
+                                height="30"
+                                className="d-inline-block align-top"
+                            />{' '}
+               ITVIEC
+                </Navbar.Brand>
+                    </Navbar>
+
+                </div>
+            </Container >
+                
                 <Row>
                     <Col xs={4} className="job-logo">
                         <img src={singlejob.img} />
@@ -65,10 +84,11 @@ export default function Detail(props) {
                                 {singlejob.description}
                                
                             </p>
-                            <Button variant="warning">Apply Now</Button>
+                            <Button variant="danger">Apply Now</Button>
                         </div>
                         
                     </Col>
+                    
                     
                 </Row>
              

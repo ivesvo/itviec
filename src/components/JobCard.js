@@ -37,7 +37,7 @@ export default function JobCard(props) {
                             </div>
                             <div>
                                 {job.tags.map(tag => (
-                                    <Badge variant="light">{tag}</Badge>
+                                    <Badge className="badge" variant="danger">{tag}</Badge>
 
                                 ))}
 
@@ -53,7 +53,7 @@ export default function JobCard(props) {
                                 <div></div>
                             )}
                         <div className="job-location">
-                            <div>Location: District {job.district} , {job.city}</div>
+                            <div>District {job.district}, {job.city}</div>
                         </div>
                         <div className="job-postdate">
                         {moment(job.time).fromNow()}

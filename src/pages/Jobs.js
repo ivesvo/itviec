@@ -92,7 +92,7 @@ export default function Jobs() {
 
             <Container>
                 <div className="title-box">
-                <h1>IT jobs in Vietnam for you</h1>
+                <h1>JOBS FOR YA</h1>
                 </div>
                
             </Container>

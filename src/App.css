@@ -10,8 +10,7 @@
   min-height: 400px;
   display: flex;
   justify-content: center;
-  padding: 3vh;
- 
+  padding: 1vw;
 }
 
 .title-box{
@@ -49,7 +48,7 @@ input.form-control{
 }
 
 .title-box{
-  color: red;
+  color: blue;
 }
 
 .btn.btn-primary{

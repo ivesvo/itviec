@@ -21,7 +21,7 @@ export default function JobCard(props) {
                 
                 <Row className="job-box" onClick={() => jobSelect()}> 
                     <Col className="job-logo">
-                        <img src={job.img} />
+                        <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/chains_26d3.png" />
                     </Col>
                     <Col xs={8}>
                         <div className="job-description">

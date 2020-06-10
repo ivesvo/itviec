@@ -23,7 +23,6 @@ export default function Detail(props) {
 
     }
 
-
     useEffect(() => {
         getDetailData();
     }, [])

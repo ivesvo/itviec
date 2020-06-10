@@ -5,13 +5,15 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Jobs from './pages/Jobs'
 import Login from './pages/Login'
 import Detail from './pages/Detail'
+import { useSelector } from "react-redux";
 
 function App() {
-  let [user, setUser] = useState(true) // if user is true -> logging in . if false, not logging in. 
+  // let [user, setUser] = useState(useSelector((state) => state.user)) // if user is true -> logging in . if false, not logging in. 
+  let user = useSelector((state) => state.user);
 
   const ProtectedRoute = (props) => {
   
-    if (user === true) {
+    if (user.isAuthenticated === true) {
       return <Route {...props} />;
     } else {
       return <Redirect to="/login" />;

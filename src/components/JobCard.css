@@ -2,22 +2,18 @@ h2{
     font-size: 30px;
     color: blue;
 }
-
-
-
-/* li{
-    list-style: none;
-} */
+h2:hover{
+    color: #98fc03
+}
 
 .job-box{
     
-    border: 1px solid blue;
-    margin: 20px;
-    padding: 20px;
-}
-.job-box:hover{
-    border: 2px solid #98fc03;
-   
+    border-bottom: 1px solid blue;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
 }
 
 .badge{
@@ -38,5 +34,34 @@ h2{
 .date-location-box{
     font-size: 13px;
     color: grey;
+    margin-top: 1rem;
     
+}
+
+.follow{
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+.follow:hover{
+    color:#98fc03;
+}
+
+.alert{
+    text-align: center;
+    padding: 10px;
+    /* height: 70px; */
+}
+
+/* .title-box{
+    border-top:1px solid blue;
+    text-align: left;
+} */
+
+.box-shadow{
+    box-shadow: 0 0 0.938em rgba(0,0,255,0.3);
+}
+.job-title{
+   word-break: break-word;
 }

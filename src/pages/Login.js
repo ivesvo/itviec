@@ -10,10 +10,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 export default function Login() {
-    let [user, setUser] = useState(useSelector((state) => state.user))
+    let user= useSelector((state) => state.user)
     const history = useHistory();
-    let [email, setEmail] = useState(null)
-    let [password, setPassword] = useState(null)
+    let email = ''
+    let password = ''
     
     const dispatch = useDispatch();
 
@@ -21,6 +21,7 @@ export default function Login() {
         e.preventDefault();
         let user = { email: email, password: password };
         dispatch({ type: "LOGIN", payload: user });
+        console.log(email, password)
         history.push('/')
         // history.goBack();
       };
@@ -65,7 +66,7 @@ export default function Login() {
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         {/* <Form.Label>Email address</Form.Label> */}
-                        <Form.Control type="email" placeholder="Email" />
+                        <Form.Control type="email" placeholder="Email" onChange={(e)=>{email=e.target.value}}/>
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
                          </Form.Text>
@@ -73,12 +74,12 @@ export default function Login() {
 
                     <Form.Group controlId="formBasicPassword">
                         {/* <Form.Label>Password</Form.Label> */}
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" placeholder="Password" onChange={(e)=>{password=e.target.value}} />
                     </Form.Group>
                     <Form.Group controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Save login info" />
                     </Form.Group>
-                    <Button variant="primary" type="submit" onClick={(e)=> login(e)}>
+                    <Button className="btn col-12" variant="primary" type="submit" onClick={(e)=> login(e)}>
                         Login
                      </Button>
                 </Form>

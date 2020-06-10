@@ -51,13 +51,7 @@ h2:hover{
 .alert{
     text-align: center;
     padding: 10px;
-    /* height: 70px; */
 }
-
-/* .title-box{
-    border-top:1px solid blue;
-    text-align: left;
-} */
 
 .box-shadow{
     box-shadow: 0 0 0.938em rgba(0,0,255,0.3);

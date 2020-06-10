@@ -115,9 +115,7 @@ export default function Jobs() {
             </Container>
 
             <Container>
-                {/* <div className="title-box">
-                    <h1>IT JOBS FOR YA</h1>
-                </div> */}
+               
                 <div>
                     <Alert variant="secondary">
                         

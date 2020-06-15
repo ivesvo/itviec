@@ -4,13 +4,12 @@ import Container from 'react-bootstrap/Container'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col,Row, Badge, Button,Navbar, Form, Nav } from 'react-bootstrap';
 import { useSelector } from "react-redux";
-
 import moment from 'moment';
 import '../App.css';
 
 
 export default function Detail(props) {
-    let [user, setUser] = useState(useSelector((state) => state.user)) 
+    let user = useSelector((state) => state.user) 
     const { id } = useParams();
     console.log("props is", { props });
 
@@ -70,9 +69,10 @@ export default function Detail(props) {
                
                 <Row>
                     <Col xs={12} md={4} lg={4}>
-                    <img style={{ maxWidth: '31.1rem'}} src={singlejob.img} />
+                        {/* `<img style={{ maxWidth: '31.1rem'}} src={singlejob.img} /> */}
+                        <img style={{maxWidth: "100%"}} src={singlejob.img} />
                     </Col>
-                    <Col xs={11} md={8} lg={7} className="job-detail-box">
+                    <Col xs={12} md={8} lg={7} className="job-detail-box">
                             <h2>{singlejob.title}</h2>
                             
                             <div>

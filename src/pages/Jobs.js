@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Container, Card, Button, Form, FormControl, Navbar, Nav, Alert, Col } from 'react-bootstrap'
+import { Container, Button, Form, FormControl, Navbar, Nav, Alert} from 'react-bootstrap'
 import JobCard from '../components/JobCard'
 import '../App.css';
 import { useHistory, useLocation } from 'react-router-dom'
@@ -16,7 +16,7 @@ function useQuery() {
 
 export default function Jobs() {
     let query = useQuery();
-    let [user, setUser] = useState(useSelector((state) => state.user)) 
+    let user = useSelector((state) => state.user)
 
     let history = useHistory()
     let [jobs, setJobs] = useState([])
@@ -41,7 +41,7 @@ export default function Jobs() {
             history.push(`/jobs/?${(QUERYSTR_PREFIX)}=${keyword}`)
         }
 
-        if (tempArray.length == 0) {
+        if (tempArray.length === 0) {
             tempArray = originalList
         }
 

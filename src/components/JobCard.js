@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button, Row, Col, Badge, ListGroup } from 'react-bootstrap'
+import { Row, Col, Badge, ListGroup } from 'react-bootstrap'
 import '../components/JobCard.css'
 import moment from 'moment';
-import { useHistory } from "react-router-dom";
-import Jobs from '../pages/Jobs';
+import { useHistory, Link} from "react-router-dom";
+
 import Card from 'react-bootstrap/Card'
 
 export default function JobCard(props) {
@@ -35,8 +35,8 @@ export default function JobCard(props) {
                     {/* <img width="100" src={job.img} /> */}
                 </Col>
                 <Col xs={7}>
-                    <div className="job-description">
-                        <h2 className="job-title">{job.title}</h2>
+                    <div className="job-title">
+                        <h2>{job.title}</h2>
                         <div className="job-salary">${job.salary}</div>
                         <div className="job-benefit">
                             <ul >{job.benefits.map(benefit => (

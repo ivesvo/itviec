@@ -1,12 +1,8 @@
-import React, {useState} from 'react'
-import { Container, Card, Button, Row, Form, Navbar, Nav } from 'react-bootstrap'
-import FormControl from 'react-bootstrap/FormControl'
+import React from 'react'
+import { Container, Button, Form, Navbar, Nav } from 'react-bootstrap'
 import { useHistory} from "react-router-dom";
 import '../App.css';
 import { useDispatch, useSelector } from "react-redux";
-
-
-
 
 
 export default function Login() {
@@ -65,7 +61,7 @@ export default function Login() {
                
                 <Form>
                     <Form.Group controlId="formBasicEmail">
-                        {/* <Form.Label>Email address</Form.Label> */}
+                    
                         <Form.Control type="email" placeholder="Email" onChange={(e)=>{email=e.target.value}}/>
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
@@ -73,7 +69,7 @@ export default function Login() {
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
-                        {/* <Form.Label>Password</Form.Label> */}
+                       
                         <Form.Control type="password" placeholder="Password" onChange={(e)=>{password=e.target.value}} />
                     </Form.Group>
                     <Form.Group controlId="formBasicCheckbox">

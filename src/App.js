@@ -1,5 +1,5 @@
 import './App.css';
-import React,  {useState} from 'react'
+import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route, Redirect } from "react-router-dom";
 import Jobs from './pages/Jobs'

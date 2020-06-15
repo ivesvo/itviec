@@ -1,8 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import '../index.css';
-
-
 import { createStore } from 'redux'
 
 
@@ -13,7 +8,7 @@ const initialState = {
 const reducer = (state=initialState, action)=>{
     if(action.type === 'LOGIN'){
         console.log("HAHAHAHHA")
-      state.user = action.payload
+      state.user = action.payload // can also do {...action.payload}
       state.user.isAuthenticated = true;
     }
     
